@@ -2,7 +2,7 @@
     "explorer.fileNesting.enabled": true,
     "explorer.fileNesting.expand": true,
     "explorer.fileNesting.patterns": {
-        "*.module.ts": "$(capture).controller.ts, $(capture).service.ts",
+        "*.module.ts": "$(capture).controller.ts, $(capture).service.ts, $(capture).service.spec.ts",
         "*.controller.ts": "$(capture).controller.spec.ts",
         "package.json": ".gitignore, .prettierrc, eslint*, nest-cli.json, package-*.json"
     },
@@ -13,13 +13,19 @@
             "color": "red-500",
         },
         {
+            "name": "nest-guard",
+            "base": "nest",
+            "color": "blue-500"
+        },
+        {
             "name": "nest-service",
             "base": "tune",
             "color": "green-500"
-        }
+        },
     ],
     "material-icon-theme.files.associations": {
         "*.module.ts": "nest-module",
-        "*.service.ts": "nest-service"
+        "*.service.ts": "nest-service",
+        "*.guard.ts": "nest-guard"
     }
 }
