@@ -17,6 +17,7 @@ model User {
   id           Int       @id @unique @default(autoincrement())
   name         String
   passwordHash String
+  refreshToken String?
   Message      Message?
   ChatUsers    ChatUser?
 }
